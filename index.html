@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishal A T - Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <!-- HEADER / HERO -->
+    <header class="hero">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <div class="hero-content">
+        <img src="me.png" alt="My Photo" class="profile-img">
+        <h1>NISHAL A T</h1>
+        <p class="subtitle">Aspiring Web Developer</p>
+    </div>
+</header>
+
+
+    <main class="container">
+
+        <!-- ABOUT -->
+        <section class="card" id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a BE 2nd-year student learning HTML and CSS. I am interested in HTML, CSS, and Machine Learning.
+                I enjoy building small projects and learning new technologies step-by-step.
+            </p>
+            <a href="projects.html"><button class="btn">View My Projects</button></a>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="card" id="skills">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript (Basic)</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Deep Learning</span>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="card" id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mailtonishal2007@gmail.com">mailtonishal2007@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919363151947">+91 93631 51947</a></p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="card" id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>X Standard – 94% (2021–2022)</li>
+                <li>XII Standard – 85% (2023–2024)</li>
+                <li>Bannari Amman Institute of Technology – Ongoing</li>
+            </ul>
+        </section>
+
+        <!-- RESUME -->
+        <section class="card" id="resume">
+            <h2>Resume</h2>
+            <a href="NISHAL_IECC_RESUME_22.12.2025.pdf" download>
+                <button class="btn">Download Resume</button>
+            </a>
+        </section>
+
+        <section class="card" id="socials">
+    <h2>Social Profiles</h2>
+    <div class="social-links">
+
+        <a href="https://www.linkedin.com/in/nishal-a-t-a66637326/" target="_blank" class="social-btn linkedin">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/NISHAL2007" target="_blank" class="social-btn github">
+            GitHub
+        </a>
+
+        <a href="https://www.instagram.com/nishal__45__" target="_blank" class="social-btn instagram">
+            Instagram
+        </a>
+
+    </div>
+</section>
+
+
+    </main>
+
+    <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+    }
+
+    toggleBtn.onclick = () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else {
+            toggleBtn.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    };
+</script>
+
+</body>
+</html>
+<footer class="footer">
+    © 2025 • Nishal A T • Built with HTML & CSS
+</footer>
+
+
+
